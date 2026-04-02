@@ -1,0 +1,319 @@
+{
+  "classifier_set_name": "visual_qa_compliance_v1",
+  "version": "1.0.0",
+  "description": "Prompt-set based visual QA classifiers for single-image compliance checks.",
+  "classifiers": [
+    {
+      "key": "solar_panel_with_farmer",
+      "display_name": "Solar Panel with Farmer",
+      "positive_prompts": [
+        "a farmer standing near a solar panel installation in a field",
+        "a person beside ground-mounted solar panels on farmland",
+        "farmer interacting with a solar panel structure outdoors",
+        "human subject and solar panel array clearly visible together",
+        "agricultural scene with farmer next to photovoltaic panels",
+        "worker near solar modules in an open land setting",
+        "farmer inspecting solar panel equipment in a field",
+        "solar power setup with a clearly visible farmer nearby"
+      ],
+      "negative_prompts": [
+        "solar panels only with no person visible",
+        "a person in a field without any solar panel",
+        "rooftop solar installation with no farmer",
+        "close-up of panel cells without a human subject",
+        "farmer portrait without visible solar infrastructure",
+        "machinery scene with no photovoltaic panel present",
+        "group of people not near solar installations",
+        "landscape view where solar panels are not identifiable"
+      ]
+    },
+    {
+      "key": "foundation_with_farmer",
+      "display_name": "Foundation with Farmer",
+      "positive_prompts": [
+        "a farmer near a control panel mounted on a cemented foundation",
+        "human subject with controller box and concrete base clearly visible",
+        "farmer standing next to control unit installed on cement platform",
+        "control panel on a cement plinth with a farmer nearby",
+        "agricultural installation showing farmer, controller, and concrete foundation",
+        "person interacting with control panel fixed to a cement base",
+        "farmer beside electrical box on a concrete pedestal",
+        "clear view of farmer and control panel over cemented structure"
+      ],
+      "negative_prompts": [
+        "control panel visible but no concrete foundation",
+        "concrete platform visible without control panel",
+        "farmer and concrete base with no controller device",
+        "control panel mounted on wall instead of cement base",
+        "farmer near machinery unrelated to control panel foundation",
+        "close-up of concrete surface without panel or person",
+        "electrical box scene without any human subject",
+        "farmer scene without visible cemented installation base"
+      ]
+    },
+    {
+      "key": "controller_with_farmer",
+      "display_name": "Controller with Farmer",
+      "positive_prompts": [
+        "farmer standing beside a control panel unit",
+        "human subject interacting with an electrical controller box",
+        "person near a controller cabinet in an outdoor setup",
+        "farmer and control panel clearly visible in the same frame",
+        "worker operating or pointing at a controller panel",
+        "agricultural site showing farmer with control device",
+        "farmer next to monitoring or controller box",
+        "clear scene of person and controller together"
+      ],
+      "negative_prompts": [
+        "control panel only with no person visible",
+        "person visible without any controller box",
+        "farmer near pump or pipe but no controller present",
+        "electrical equipment too far to identify as controller",
+        "indoor office control desk unrelated to field installation",
+        "portrait of farmer without visible device",
+        "machine room scene with no identifiable human subject",
+        "close-up of labels or wires without full controller context"
+      ]
+    },
+    {
+      "key": "front_side_panel_module",
+      "display_name": "Front Side Panel Module",
+      "positive_prompts": [
+        "front-facing view of a solar panel module",
+        "solar panel surface seen directly from the front",
+        "clear photovoltaic cell grid visible on panel front side",
+        "full panel face occupying most of the frame",
+        "solar module with minimal angle distortion and clear front view",
+        "straight-on image of PV panel cell pattern",
+        "panel front sheet clearly visible with rectangular grid lines",
+        "primary subject is the front side of a solar module"
+      ],
+      "negative_prompts": [
+        "rear side of a solar panel with junction box visible",
+        "edge view of panel without front cell grid",
+        "oblique angle where panel front is not clearly visible",
+        "distant solar farm where module face is not detailed",
+        "image focused on frame or mounting hardware only",
+        "non-solar glass surface mistaken as a panel",
+        "panel blocked by shadows or heavy occlusion",
+        "close-up of unrelated electrical components"
+      ]
+    },
+    {
+      "key": "water_discharge_with_farmer",
+      "display_name": "Water Discharge with Farmer",
+      "positive_prompts": [
+        "farmer standing near a pipe with visible flowing water",
+        "person beside active water discharge from pump outlet",
+        "farmer interacting with irrigation flow from a pipe",
+        "clear water stream exiting outlet with farmer in frame",
+        "human subject near running water discharge in field",
+        "operator present at visible pump water discharge",
+        "agricultural water release scene with farmer nearby",
+        "person and clearly visible flowing discharge from source"
+      ],
+      "negative_prompts": [
+        "farmer near dry pipe with no water flow",
+        "flowing water visible but no person present",
+        "person near pump equipment without discharge",
+        "standing water or puddle with no visible outlet flow",
+        "rainfall scene not showing pipe or pump discharge",
+        "water tank scene without active outflow",
+        "farmer portrait with no irrigation activity",
+        "pipe visible but stream not visible"
+      ]
+    },
+    {
+      "key": "inside_imei_code",
+      "display_name": "Inside IMEI Code",
+      "positive_prompts": [
+        "inside of a device showing an IMEI label",
+        "battery compartment with readable IMEI number",
+        "inner panel sticker containing IMEI text",
+        "device interior with clearly legible IMEI code",
+        "close-up of phone or modem interior showing IMEI",
+        "printed IMEI on internal label inside hardware casing",
+        "open device compartment with IMEI identifier visible",
+        "clear view of IMEI digits on inside sticker"
+      ],
+      "negative_prompts": [
+        "device exterior only with no inside compartment",
+        "barcode or serial label that does not show IMEI",
+        "blurred text label where numbers are unreadable",
+        "invoice or paper document showing IMEI text",
+        "phone screen displaying settings instead of internal label",
+        "general electronics label without IMEI keyword context",
+        "inside device image with label cropped out",
+        "close-up of battery without any readable code"
+      ]
+    },
+    {
+      "key": "aadhaar_card",
+      "display_name": "Aadhaar Card",
+      "positive_prompts": [
+        "an Aadhaar card clearly visible in the frame",
+        "Indian Aadhaar ID card showing typical layout and fields",
+        "government identity card with Aadhaar-style design",
+        "Aadhaar document with photo and text sections visible",
+        "clear image of Aadhaar card held by a person",
+        "Aadhaar card placed on a surface with readable structure",
+        "UIDAI-style Aadhaar card front side view",
+        "identity card recognizable as an Aadhaar card"
+      ],
+      "negative_prompts": [
+        "PAN card or other ID card that is not Aadhaar",
+        "voter ID or driving license instead of Aadhaar",
+        "document image with no identifiable ID card",
+        "blurred card where card type is unclear",
+        "paper form or certificate not an identity card",
+        "mobile screenshot of personal details not card photo",
+        "business card or bank card mistaken as Aadhaar",
+        "partial card crop that hides key Aadhaar features"
+      ]
+    },
+    {
+      "key": "pump_serial_number",
+      "display_name": "Pump Serial Number",
+      "positive_prompts": [
+        "water pump with readable serial number on nameplate",
+        "pump body showing serial number label clearly",
+        "machine pump with identifiable serial code on sticker",
+        "close-up of pump plate with legible serial text",
+        "pump equipment context with visible serial number",
+        "serial number tag attached to irrigation pump",
+        "metal plate on pump containing readable serial digits",
+        "pump unit and serial label both visible"
+      ],
+      "negative_prompts": [
+        "pump visible but no serial label present",
+        "serial number text visible without pump context",
+        "blurred pump label with unreadable code",
+        "motor nameplate shown instead of pump label",
+        "controller serial label mistaken as pump serial",
+        "pipe or valve image with no pump body",
+        "handwritten number not on official machine label",
+        "distant pump image where label cannot be read"
+      ]
+    },
+    {
+      "key": "motor_serial_number",
+      "display_name": "Motor Serial Number",
+      "positive_prompts": [
+        "electric motor with readable serial number on nameplate",
+        "motor body showing serial number label clearly",
+        "close-up of motor plate with legible serial text",
+        "industrial motor with visible identification serial code",
+        "electric motor and attached serial sticker in frame",
+        "motor housing with engraved or printed serial number",
+        "clear motor context with readable serial digits",
+        "nameplate on motor containing serial number"
+      ],
+      "negative_prompts": [
+        "motor visible but serial number not readable",
+        "serial number label shown without motor context",
+        "pump serial plate mistaken for motor plate",
+        "controller serial plate instead of motor label",
+        "blurred metal plate with illegible text",
+        "generic machinery image without motor identification",
+        "wires and parts only no full motor body",
+        "barcode label unrelated to electric motor"
+      ]
+    },
+    {
+      "key": "controller_serial_number",
+      "display_name": "Controller Serial Number",
+      "positive_prompts": [
+        "controller box with readable serial number label",
+        "control panel showing serial code on sticker or plate",
+        "electrical controller cabinet with legible serial number",
+        "controller unit and serial label clearly visible together",
+        "close-up of controller nameplate with serial text",
+        "control box surface showing identification serial digits",
+        "field controller device with visible serial tag",
+        "clear serial number on control panel body"
+      ],
+      "negative_prompts": [
+        "controller visible but no serial label shown",
+        "serial label visible without controller context",
+        "motor nameplate mistaken as controller serial",
+        "pump label instead of controller serial plate",
+        "wiring cabinet image with unreadable label",
+        "electrical panel far away with no legible code",
+        "paper document with serial text not on controller",
+        "controller screen only no physical serial plate"
+      ]
+    },
+    {
+      "key": "water_filling_with_cement_mat",
+      "display_name": "Water Filling with Cement Mat",
+      "positive_prompts": [
+        "water discharge flowing onto a cemented platform",
+        "visible water stream filling over concrete base",
+        "pipe outlet releasing water on a concrete mat",
+        "active water flow on cement floor near installation",
+        "clear water movement over cemented surface",
+        "discharge point with water spreading on concrete slab",
+        "water outlet and cement platform both prominently visible",
+        "irrigation flow onto a concrete or cement pad"
+      ],
+      "negative_prompts": [
+        "water flow on soil with no cement platform",
+        "cement platform visible but no active water flow",
+        "standing wet surface without visible discharge source",
+        "water tank filling scene not on concrete mat",
+        "pipe and platform visible but no flowing stream",
+        "person pouring water manually not discharge outlet",
+        "rainwater on concrete without outlet context",
+        "dry concrete base with no water present"
+      ]
+    },
+    {
+      "key": "earthing_and_lightning",
+      "display_name": "Earthing and Lightning",
+      "positive_prompts": [
+        "electrical earthing wire and lightning protection component visible",
+        "grounding strip connected to equipment with lightning arrester",
+        "earthing system and lightning conductor in the same setup",
+        "ground rod wiring and surge or lightning protection hardware",
+        "clear view of grounding connection and lightning safety component",
+        "electrical installation showing earthing plus lightning arrestor",
+        "bonding wire and lightning protection unit visibly installed",
+        "earthing arrangement with identifiable lightning protection device"
+      ],
+      "negative_prompts": [
+        "general electrical wiring without earthing components",
+        "earthing wire visible but no lightning protection element",
+        "lightning arrester shown without grounding connection",
+        "control panel internals with no grounding setup visible",
+        "pole or cable image lacking identifiable protection hardware",
+        "construction metal rods mistaken for grounding system",
+        "electrical scene too distant to verify components",
+        "diagram or schematic instead of real installation photo"
+      ]
+    },
+    {
+      "key": "outside_contour",
+      "display_name": "Outside Contour",
+      "positive_prompts": [
+        "full exterior view of the installation boundary and layout",
+        "outside contour of the complete system visible in one frame",
+        "wide shot showing entire external structure of setup",
+        "overall installation shape and perimeter clearly captured",
+        "complete outer view of equipment arrangement on site",
+        "external perspective showing full footprint of installation",
+        "broad view including full system outline and surroundings",
+        "site image focused on total exterior contour"
+      ],
+      "negative_prompts": [
+        "close-up of a single component without full installation view",
+        "partial structure crop where system boundary is missing",
+        "interior or inside view instead of outside contour",
+        "zoomed detail shot of panel or controller only",
+        "image blocked by objects obscuring full installation",
+        "portrait-oriented close shot lacking full site layout",
+        "night image where boundary and shape are unclear",
+        "distant landscape with installation not clearly identifiable"
+      ]
+    }
+  ]
+}

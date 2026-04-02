@@ -1,0 +1,75 @@
+{
+  "calibration_profile_name": "fp_sensitive_v1",
+  "version": "1.0.0",
+  "description": "Conservative pass thresholds to reduce false positives. Uses positive/negative prompt sets with margin and separation checks.",
+  "global": {
+    "top_k_positive": 3,
+    "top_k_negative": 3,
+    "weights": {
+      "margin": 1.0,
+      "separation": 0.5
+    },
+    "sigmoid": {
+      "enabled": true,
+      "a": 8.0,
+      "b": -0.2
+    },
+    "decision_defaults": {
+      "pass_score_threshold": 0.86,
+      "fail_score_threshold": 0.42,
+      "min_margin_for_pass": 0.085,
+      "min_separation_for_pass": 0.045
+    }
+  },
+  "per_classifier_overrides": {
+    "inside_imei_code": {
+      "pass_score_threshold": 0.90,
+      "fail_score_threshold": 0.48,
+      "min_margin_for_pass": 0.10,
+      "min_separation_for_pass": 0.05
+    },
+    "aadhaar_card": {
+      "pass_score_threshold": 0.90,
+      "fail_score_threshold": 0.48,
+      "min_margin_for_pass": 0.10,
+      "min_separation_for_pass": 0.05
+    },
+    "pump_serial_number": {
+      "pass_score_threshold": 0.89,
+      "fail_score_threshold": 0.46,
+      "min_margin_for_pass": 0.095,
+      "min_separation_for_pass": 0.05
+    },
+    "motor_serial_number": {
+      "pass_score_threshold": 0.89,
+      "fail_score_threshold": 0.46,
+      "min_margin_for_pass": 0.095,
+      "min_separation_for_pass": 0.05
+    },
+    "controller_serial_number": {
+      "pass_score_threshold": 0.89,
+      "fail_score_threshold": 0.46,
+      "min_margin_for_pass": 0.095,
+      "min_separation_for_pass": 0.05
+    },
+    "outside_contour": {
+      "pass_score_threshold": 0.84,
+      "fail_score_threshold": 0.40,
+      "min_margin_for_pass": 0.07,
+      "min_separation_for_pass": 0.04
+    },
+    "front_side_panel_module": {
+      "pass_score_threshold": 0.85,
+      "fail_score_threshold": 0.40,
+      "min_margin_for_pass": 0.075,
+      "min_separation_for_pass": 0.04
+    }
+  },
+  "reason_code_rules": {
+    "low_positive_signal": "pos_topk_mean < 0.24",
+    "high_negative_signal": "neg_topk_mean > 0.22",
+    "low_margin": "margin < min_margin_for_pass",
+    "cross_classifier_conflict": "separation < min_separation_for_pass",
+    "ambiguous_band": "fail_score_threshold < score < pass_score_threshold"
+  }
+}
